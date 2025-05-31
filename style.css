@@ -17,7 +17,7 @@
 
 .music-player{
     background: #ffe0e5;
-    width: 480px;
+    width: 400px;
     padding: 25px 35px;
     text-align: center;
 }
@@ -67,7 +67,7 @@ nav{
  background: #f53129;
  border-radius: 4px;
  cursor: pointer;
- margin: 30px 10px;
+ margin: 40px 10px;
 }
 
 
@@ -79,4 +79,30 @@ nav{
     border-radius: 50%;
     border: 8px solid white;
     box-shadow: 0 5px 5px rgba(255, 30, 30, 0.30);
+}
+
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls div{
+    margin: 20px;
+    height: 60px;
+    width: 60px;
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #f53129;
+    box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
+    cursor: pointer;
+}
+/* change bg color , icon color and size of these icons  */
+.controls div:nth-child(2){
+    transform: scale(1.5);
+    background: #f53129;
+    color: white;
 }
