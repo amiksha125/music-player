@@ -24,7 +24,8 @@
             <p>Ed Sheeran</p>
 
             <!-- add audio  -->
-             <audio controls id="song">
+              <!-- <audio controls id="song"> remove controls to remove default playbar of song  -->
+             <audio id="song">
                  <source src="assets/PerfectSong.mp3" type="audio/mpeg">
              </audio>
 
@@ -61,6 +62,23 @@
                 ctrlIcon.classList.add("fa-pause")
             }
         }
+      //update the progress bar every 0.5 sec as song plays
+        if(song.play()){
+            setInterval(() =>{
+                progress.value = song.currentTime;
+            }, 500);
+        }
+
+        //change the song acc to slide range
+
+        progress.onchange = function(){
+            song.play();
+            song.currentTime = progress.value;
+            ctrlIcon.classList.remove("fa-play");
+            ctrlIcon.classList.add("fa-pause")
+        }
+
+
     </script>
 </body>
 </html>
